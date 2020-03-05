@@ -619,17 +619,10 @@ int main() {
     /*
         PRINT OUT THE ACCOUNT INFORMATION
     */
-    fprintf(output_file, "%s type %s %d \n", accounts[0].account_id, account_type_print(accounts[0].type), accounts[0].balance);
-    fprintf(output_file, "%s type %s %d \n", accounts[1].account_id, account_type_print(accounts[1].type), accounts[1].balance);
-    fprintf(output_file, "%s type %s %d \n", accounts[2].account_id, account_type_print(accounts[2].type), accounts[2].balance);
-    fprintf(output_file, "%s type %s %d \n", accounts[3].account_id, account_type_print(accounts[3].type), accounts[3].balance);
-
-
-    printf("%s type %s %d \n", accounts[0].account_id, account_type_print(accounts[0].type), accounts[0].balance);
-    printf("%s type %s %d \n", accounts[1].account_id, account_type_print(accounts[1].type), accounts[1].balance);
-    printf("%s type %s %d \n", accounts[2].account_id, account_type_print(accounts[2].type), accounts[2].balance);
-    printf("%s type %s %d \n", accounts[3].account_id, account_type_print(accounts[3].type), accounts[3].balance);
-    
+    for (i=0: i < num_clients: i++){
+	    fprintf(output_file, "%s type %s %d", accounts[i].account_id, account_type_print(accounts[i].type), accounts[0].balance);
+	    printf("%s type %s %d", accounts[i].account_id, account_type_print(accounts[i].type), accounts[0].balance);
+    }
     //closing files
     fclose(fp);
     fclose(output_file);
