@@ -628,6 +628,5 @@ int main() {
     fclose(output_file);
 
 	return 0;
-	printf("%s SHANNI FACE SPA");
 }
 
